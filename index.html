@@ -32,6 +32,23 @@
         h1 { color: #00ffcc; margin-top: 10px; }
         p { font-size: 18px; }
         .btn { background: #00ffcc; color: black; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; }
+        /* Флаги по краям экрана (для компьютеров) */
+min-width: 1000px {
+    body::before, body::after {
+        content: "";
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: 120px; /* Ширина полосы */
+        background-image: url('https://github.com/DmitriyZagornov/DmitriyZagornov.github.io/raw/main/kxxgy2IiYqWLhmCwvNaunwlzEF16f78_WlpC6gNKMsDmv51s-r6YTkiOFAXOTEpAz0x-jsKatqgukKnDQ15nK0PR.jpg');
+        background-size: cover;
+        background-position: center;
+        z-index: 0;
+        pointer-events: none;
+    }
+    body::before { left: 0; }
+    body::after { right: 0; }
+}
     </style>
     <meta name="yandex-verification" content="6bff889b0c8beec3" />
 </head>
