@@ -30,7 +30,7 @@
     <title>Нотариальный перевод документов в СПб — срочно, диплом, паспорт | От 300 ₽</title>
     <meta name="description" content="Срочный нотариальный перевод документов в Санкт-Петербурге. Перевод паспорта, диплома, свидетельства о рождении. Принимаем по фото и онлайн. Заверение нотариуса за 1 час.">
 
-    <!-- Микроразметка Schema.org для локального бизнеса -->
+    <!-- Микроразметка Локального Бизнеса -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -39,24 +39,35 @@
       "image": "https://dmitriyzagornov.github.io/DmitriyZagornov.github.io/AMkrOD5jybff4autO9zRdxb_QnAwPGfTlcqRrBsRb5zlwVHj9F1pF3qCbVwOy1nIX6sUSnT5pDJJDp8RtaddOmCN.jpg",
       "telephone": "+7-950-728-40-34",
       "email": "defgdoc@mail.ru",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Санкт-Петербург",
-        "addressCountry": "RU"
-      },
+      "address": { "@type": "PostalAddress", "addressLocality": "Санкт-Петербург", "addressCountry": "RU" },
       "priceRange": "от 300 ₽",
       "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "08:00", "closes": "20:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "18:00" }
+      ]
+    }
+    </script>
+
+    <!-- Микроразметка FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
         {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          "opens": "08:00",
-          "closes": "20:00"
+          "@type": "Question",
+          "name": "Сколько стоит нотариальный перевод?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Стоимость складывается из тарифа за перевод (от 300 ₽ за страницу) и услуг нотариуса (от 800 ₽ за документ). Точную цену менеджер назовет после просмотра фото документа." }
         },
         {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Saturday",
-          "opens": "09:00",
-          "closes": "18:00"
+          "@type": "Question",
+          "name": "Как быстро вы делаете перевод?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Стандартный срок — от 1 до 24 часов в зависимости от объема. Если документ нужен срочно, доступен срочный тариф (x1,5 – x2 к стоимости)." }
+        },
+        {
+          "@type": "Question",
+          "name": "Можно ли отправить документ по фото?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Да, пришлите четкое фото или скан документа в WhatsApp или Telegram. Мы посчитаем стоимость и приступим к работе." }
         }
       ]
     }
@@ -65,15 +76,9 @@
     <style>
         /* ---------- Базовые стили ---------- */
         * { box-sizing: border-box; }
-
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background-color: #f4f7f6;
-            color: #333;
-            text-align: center;
-            padding: 20px;
-            margin: 0;
-            overflow-x: hidden;
+            font-family: 'Segoe UI', Arial, sans-serif; background-color: #f4f7f6; color: #333;
+            text-align: center; padding: 20px; margin: 0; overflow-x: hidden; padding-bottom: 70px;
         }
 
         /* ---------- БОКОВЫЕ КОЛОННЫ С ФЛАГАМИ ---------- */
@@ -83,8 +88,7 @@
                 background-image: url('kxxgy2IiYqWLhmCwvNaunwlzEF16f78_WlpC6gNKMsDmv51s-r6YTkiOFAXOTEpAz0x-jsKatqgukKnDQ15nK0PR.jpg');
                 background-size: 100% auto; background-position: center top; background-repeat: repeat-y;
             }
-            body::before { left: 0; }
-            body::after  { right: 0; }
+            body::before { left: 0; } body::after { right: 0; }
         }
 
         /* ---------- Блок нотариального перевода ---------- */
@@ -92,135 +96,108 @@
             background-image: url('AMkrOD5jybff4autO9zRdxb_QnAwPGfTlcqRrBsRb5zlwVHj9F1pF3qCbVwOy1nIX6sUSnT5pDJJDp8RtaddOmCN.jpg');
             background-size: cover; background-position: center; background-repeat: no-repeat;
             position: relative; padding: 50px 30px; font-family: 'Arial', sans-serif; color: #333;
-            text-align: center; border-radius: 12px; max-width: 850px; margin: 0 auto;
+            text-align: center; border-radius: 12px; max-width: 900px; margin: 0 auto;
             box-shadow: 0 10px 30px rgba(0,0,0,0.15); border: 1px solid #e0e0e0; overflow: hidden;
         }
-
-        .notary-overlay {
-            position: absolute; inset: 0; background-color: rgba(255, 255, 255, 0.92); z-index: 1;
-        }
-
+        .notary-overlay { position: absolute; inset: 0; background-color: rgba(255, 255, 255, 0.95); z-index: 1; }
         .notary-content { position: relative; z-index: 2; }
 
-        .notary-title {
-            color: #006b5b; font-size: 32px; font-weight: 800; margin-bottom: 15px; line-height: 1.2;
-        }
+        .notary-title { color: #006b5b; font-size: 34px; font-weight: 800; margin-bottom: 15px; line-height: 1.2; }
+        .notary-subtitle { font-size: 18px; line-height: 1.6; max-width: 650px; margin: 0 auto 30px; color: #444; }
 
-        .notary-subtitle {
-            font-size: 18px; line-height: 1.6; max-width: 650px; margin: 0 auto 30px; color: #444;
-        }
-
-        /* ---------- Блок кнопок ---------- */
-        .contact-actions {
-            display: flex; flex-direction: column; gap: 15px; max-width: 400px; margin: 0 auto 35px;
-        }
-
-        .btn-main {
-            display: block; background-color: #008f7a; color: #fff; font-size: 18px; font-weight: bold;
-            padding: 16px 20px; text-decoration: none; border-radius: 6px; border: 2px solid #008f7a;
-            transition: all 0.2s; text-transform: uppercase;
-        }
+        /* ---------- Кнопки ---------- */
+        .contact-actions { display: flex; flex-direction: column; gap: 15px; max-width: 400px; margin: 0 auto 35px; }
+        .btn-main { display: block; background-color: #008f7a; color: #fff; font-size: 18px; font-weight: bold; padding: 16px 20px; text-decoration: none; border-radius: 6px; border: 2px solid #008f7a; transition: all 0.2s; text-transform: uppercase; }
         .btn-main:hover { background-color: #007565; border-color: #007565; transform: translateY(-2px); }
-
-        .btn-call {
-            display: block; background-color: #fff; color: #008f7a; font-size: 20px; font-weight: bold;
-            padding: 12px 20px; text-decoration: none; border-radius: 6px; border: 2px solid #008f7a;
-            transition: all 0.2s;
-        }
+        .btn-call { display: block; background-color: #fff; color: #008f7a; font-size: 20px; font-weight: bold; padding: 12px 20px; text-decoration: none; border-radius: 6px; border: 2px solid #008f7a; transition: all 0.2s; }
         .btn-call:hover { background-color: #e6f7f4; }
-
         .btn-hint { font-size: 13px; color: #777; margin-top: -5px; margin-bottom: 10px; }
 
-        .notary-hours {
-            font-size: 15px; color: #555; margin-bottom: 30px; line-height: 1.6;
-            background: rgba(0,0,0,0.04); padding: 10px; border-radius: 8px; display: inline-block;
-        }
+        .notary-hours { font-size: 15px; color: #555; margin-bottom: 30px; line-height: 1.6; background: rgba(0,0,0,0.04); padding: 10px; border-radius: 8px; display: inline-block; }
 
         /* ---------- Мессенджеры ---------- */
         .messengers { font-size: 14px; margin-bottom: 30px; }
         .messengers p { margin-bottom: 12px; color: #555; font-weight: bold; }
-
         .messenger-links { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
-
-        .messenger-links a {
-            display: inline-block; color: #fff; padding: 12px 24px; border-radius: 6px;
-            text-decoration: none; font-weight: bold; font-size: 15px;
-            transition: transform 0.15s, opacity 0.15s; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
+        .messenger-links a { display: inline-block; color: #fff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 15px; transition: transform 0.15s, opacity 0.15s; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
         .messenger-links a:hover { opacity: 0.9; transform: translateY(-2px); }
+        .tg { background-color: #0088cc; } .wa { background-color: #25D366; } .ya { background-color: #fc3f1d; } .max { background-color: #5b50e5; }
 
-        .tg  { background-color: #0088cc; }
-        .wa  { background-color: #25D366; }
-        .ya  { background-color: #fc3f1d; }
-        .max { background-color: #5b50e5; }
-
-        /* ---------- Блок документов (СЕО) ---------- */
-        .docs-section {
-            margin-bottom: 40px; background: #fff; padding: 25px; border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
+        /* ---------- Блок документов ---------- */
+        .docs-section { margin-bottom: 40px; background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
         .docs-section h3 { color: #006b5b; font-size: 20px; margin-bottom: 20px; }
         .docs-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
-        .doc-item {
-            background: #f4f7f6; border: 1px solid #dce7e4; color: #333; padding: 10px 20px;
-            border-radius: 20px; font-size: 15px; font-weight: 600; text-decoration: none; transition: all 0.2s;
-        }
+        .doc-item { background: #f4f7f6; border: 1px solid #dce7e4; color: #333; padding: 10px 20px; border-radius: 20px; font-size: 15px; font-weight: 600; text-decoration: none; transition: all 0.2s; }
         .doc-item:hover { background: #008f7a; color: #fff; border-color: #008f7a; }
 
-        /* ---------- Текстовый SEO-блок ---------- */
-        .seo-text {
-            text-align: left; margin-bottom: 40px; background: #fff; padding: 25px;
-            border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); font-size: 15px; line-height: 1.8; color: #444;
-        }
+        /* ---------- Калькулятор (НОВОЕ) ---------- */
+        .calc-section { margin-bottom: 40px; background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: left; }
+        .calc-section h2 { color: #006b5b; font-size: 22px; margin-bottom: 15px; text-align: center; }
+        .calc-row { margin-bottom: 15px; }
+        .calc-row label { display: block; font-weight: bold; margin-bottom: 5px; color: #444; font-size: 14px; }
+        .calc-row select, .calc-row input { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; font-size: 16px; color: #333; }
+        .calc-result { margin-top: 20px; padding: 15px; background: #e6f7f4; border-radius: 6px; text-align: center; border: 1px solid #bce3dd; }
+        .calc-result span { font-size: 24px; font-weight: bold; color: #006b5b; display: block; margin-top: 5px; }
+
+        /* ---------- Как мы работаем ---------- */
+        .steps-section { margin-bottom: 40px; background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: left; }
+        .steps-section h2 { color: #006b5b; font-size: 22px; margin-bottom: 20px; text-align: center; }
+        .step-item { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 15px; }
+        .step-num { background: #008f7a; color: #fff; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; }
+        .step-text { font-size: 16px; color: #444; line-height: 1.5; padding-top: 3px; }
+
+        /* ---------- Гарантии и Отзывы ---------- */
+        .guarantees { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 40px; }
+        .guarantee-item { background: #e6f7f4; color: #006b5b; padding: 15px 25px; border-radius: 8px; font-weight: bold; font-size: 15px; border: 1px solid #bce3dd; }
+        
+        .reviews-section { margin-bottom: 40px; background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .reviews-section h2 { color: #006b5b; font-size: 22px; margin-bottom: 20px; }
+        .review-card { background: #f9f9f9; border-left: 4px solid #008f7a; padding: 15px; margin-bottom: 15px; text-align: left; border-radius: 0 8px 8px 0; }
+        .review-text { font-size: 15px; color: #444; font-style: italic; margin-bottom: 10px; }
+        .review-author { font-size: 14px; font-weight: bold; color: #006b5b; }
+
+        /* ---------- SEO Текст и FAQ ---------- */
+        .seo-text { text-align: left; margin-bottom: 40px; background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); font-size: 15px; line-height: 1.8; color: #444; }
         .seo-text h2 { color: #006b5b; font-size: 22px; margin-bottom: 15px; }
         .seo-text p { margin-bottom: 15px; }
 
-        /* ---------- FAQ ---------- */
-        .faq-section {
-            text-align: left; margin-bottom: 40px; background: #fff; padding: 25px;
-            border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
+        .faq-section { text-align: left; margin-bottom: 40px; background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
         .faq-section h2 { color: #006b5b; font-size: 22px; margin-bottom: 20px; text-align: center; }
         .faq-item { border-bottom: 1px solid #eee; padding: 15px 0; }
         .faq-item:last-child { border-bottom: none; }
         .faq-question { font-weight: bold; font-size: 16px; color: #333; margin-bottom: 8px; }
         .faq-answer { font-size: 15px; color: #555; line-height: 1.6; }
 
-        /* ---------- Прайс-лист ---------- */
+        /* ---------- Прайс и Реквизиты ---------- */
         .price-section { margin-top: 40px; border-top: 2px dashed #ddd; padding-top: 30px; }
         .price-section h3 { color: #006b5b; margin-bottom: 25px; font-size: 24px; }
-
         .table-wrap { overflow-x: auto; }
-
-        .price-table {
-            width: 100%; border-collapse: collapse; text-align: left; font-size: 15px; color: #333;
-            min-width: 500px; background-color: #fff; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
+        .price-table { width: 100%; border-collapse: collapse; text-align: left; font-size: 15px; color: #333; min-width: 500px; background-color: #fff; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
         .price-table thead tr { background-color: #f0f0f0; color: #006b5b; }
         .price-table th { padding: 14px; border-bottom: 2px solid #ddd; }
         .price-table td { padding: 14px; border-bottom: 1px solid #eee; }
         .price-table tr:hover { background-color: #f9f9f9; }
         .price-table td span { font-size: 12px; color: #888; display: inline-block; margin-top: 4px; }
-
-        /* ---------- Доп. условия ---------- */
-        .price-notes {
-            text-align: left; margin-top: 20px; font-size: 14px; color: #444; line-height: 1.6;
-            background-color: #f4f7f6; padding: 20px; border-radius: 8px; border-left: 4px solid #008f7a;
-        }
+        .price-notes { text-align: left; margin-top: 20px; font-size: 14px; color: #444; line-height: 1.6; background-color: #f4f7f6; padding: 20px; border-radius: 8px; border-left: 4px solid #008f7a; }
         .price-notes p { margin: 8px 0; }
-
         .price-disclaimer { font-size: 12px; color: #888; margin-top: 20px; font-style: italic; text-align: center; }
 
-        /* ---------- Мобильная адаптация ---------- */
+        /* ---------- Мобильная фиксированная панель ---------- */
+        .mobile-fixed-bar { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: #fff; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); z-index: 100; padding: 10px; gap: 10px; }
+        .mobile-fixed-bar a { flex: 1; text-align: center; padding: 12px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 16px; }
+        .mobile-fixed-bar .m-call { background: #008f7a; color: #fff; }
+        .mobile-fixed-bar .m-wa { background: #25D366; color: #fff; }
+
+        /* ---------- Адаптив ---------- */
         @media (max-width: 600px) {
             .notary-title { font-size: 24px; }
             .notary-block { padding: 30px 15px; }
-            .notary-overlay { background-color: rgba(255, 255, 255, 0.95); }
             .btn-main, .btn-call { font-size: 16px; padding: 14px; }
             .docs-grid { gap: 8px; }
             .doc-item { font-size: 14px; padding: 8px 16px; }
-            .seo-text, .faq-section { padding: 15px; }
-            
+            .seo-text, .faq-section, .reviews-section, .steps-section, .calc-section { padding: 15px; }
+            .guarantees { flex-direction: column; gap: 10px; }
+            .mobile-fixed-bar { display: flex; }
             .price-table, .price-table thead, .price-table tbody, .price-table th, .price-table td, .price-table tr { display: block; }
             .price-table thead tr { position: absolute; top: -9999px; left: -9999px; }
             .price-table tr { border: 1px solid #ccc; margin-bottom: 10px; border-radius: 8px; background: #fff; }
@@ -241,7 +218,6 @@
 
         <div class="notary-content">
             <h1 class="notary-title">Нотариальный перевод документов в СПб</h1>
-
             <p class="notary-subtitle">
                 Срочный письменный перевод любой сложности с заверением нотариуса.<br>
                 Принимаем документы <strong>по фото и онлайн 24/7!</strong>
@@ -268,6 +244,12 @@
                 </div>
             </div>
 
+            <div class="guarantees">
+                <div class="guarantee-item">🛡️ Гарантия качества</div>
+                <div class="guarantee-item">⚡ Срочно за 1 час</div>
+                <div class="guarantee-item">🔒 Конфиденциально</div>
+            </div>
+
             <div class="docs-section">
                 <h3>Переводим любые документы:</h3>
                 <div class="docs-grid">
@@ -280,14 +262,70 @@
                 </div>
             </div>
 
-            <!-- SEO Текст -->
+            <!-- КАЛЬКУЛЯТОР -->
+            <div class="calc-section">
+                <h2>Рассчитайте стоимость</h2>
+                <div class="calc-row">
+                    <label>Выберите язык документа:</label>
+                    <select id="calcLang" onchange="calculatePrice()">
+                        <option value="300">Английский (и СНГ) — от 300 ₽</option>
+                        <option value="400">Европейский (немецкий, французский) — от 400 ₽</option>
+                        <option value="700">Редкий (польский, чешский, турецкий) — от 700 ₽</option>
+                        <option value="800">Азиатский (китайский, арабский) — от 800 ₽</option>
+                    </select>
+                </div>
+                <div class="calc-row">
+                    <label>Количество страниц:</label>
+                    <input type="number" id="calcPages" value="1" min="1" max="100" oninput="calculatePrice()">
+                </div>
+                <div class="calc-row">
+                    <label>Срочность:</label>
+                    <select id="calcUrgency" onchange="calculatePrice()">
+                        <option value="1">Стандарт (1-2 дня)</option>
+                        <option value="1.5">Срочно (в течение дня) — x1.5</option>
+                        <option value="2">Очень срочно (за 1-2 часа) — x2</option>
+                    </select>
+                </div>
+                <div class="calc-result">
+                    Примерная стоимость с нотариусом:
+                    <span id="totalPrice">от 1100 ₽</span>
+                </div>
+            </div>
+
+            <div class="steps-section">
+                <h2>Как мы работаем</h2>
+                <div class="step-item">
+                    <div class="step-num">1</div>
+                    <div class="step-text"><strong>Отправьте фото.</strong> Сфотографируйте документ и пришлите нам в WhatsApp или Telegram.</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">2</div>
+                    <div class="step-text"><strong>Согласуйте цену.</strong> Менеджер назовет точную стоимость и сроки. Оплата после согласования.</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">3</div>
+                    <div class="step-text"><strong>Получите перевод.</strong> Заверенный нотариусом перевод можно забрать лично или получить в электронном виде.</div>
+                </div>
+            </div>
+
+            <div class="reviews-section">
+                <h2>Отзывы клиентов</h2>
+                <div class="review-card">
+                    <div class="review-text">«Срочно нужен был перевод диплома для посольства. Скинула фото в WhatsApp, через 2 часа забрала готовый перевод с печатью нотариуса. Очень выручили!»</div>
+                    <div class="review-author">— Екатерина, Санкт-Петербург</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-text">«Переводили паспорт и свидетельство о рождении для визы. Сделали быстро, цена адекватная. Рекомендую!»</div>
+                    <div class="review-author">— Дмитрий, Санкт-Петербург</div>
+                </div>
+            </div>
+
             <div class="seo-text">
                 <h2>Профессиональный перевод с заверением нотариуса</h2>
                 <p>Нужен срочный нотариальный перевод документов в Санкт-Петербурге? Мы выполняем письменный перевод с любого языка (английский, китайский, немецкий, французский и др.) и заверяем его у нотариуса. Работаем с физическими и юридическими лицами.</p>
                 <p>Переводим паспорта, дипломы (с приложением), свидетельства о рождении и браке, водительские права, трудовые книжки, справки, банковские выписки и уставы. Принимаем сканы и фотографии документов онлайн, что позволяет сэкономить ваше время. Готовый перевод можно забрать лично или получить в электронном виде.</p>
             </div>
 
-            <!-- FAQ -->
             <div class="faq-section">
                 <h2>Часто задаваемые вопросы</h2>
                 <div class="faq-item">
@@ -304,10 +342,8 @@
                 </div>
             </div>
 
-            <!-- Прайс-лист -->
             <div class="price-section">
                 <h3>Стоимость перевода</h3>
-
                 <div class="table-wrap">
                     <table class="price-table">
                         <thead>
@@ -368,16 +404,8 @@
                 </p>
             </div>
             
-            <!-- Подвал -->
+            <!-- ПОДВАЛ С РЕКВИЗИТАМИ (ДЛЯ ДОВЕРИЯ) -->
             <div style="margin-top: 40px; font-size: 12px; color: #888; text-align: center; border-top: 1px solid #ddd; padding-top: 20px;">
-                <p>© 2026 Нотариальный перевод документов в СПб. Все права защищены.</p>
-                <p style="margin-top: 5px;">Информация на сайте не является публичной офертой.</p>
-            </div>
-        </div>
-    </div>
-
-</body>
-</html>
-
-</body>
-</html>
+                <p><strong>ИП Иванов И.И.</strong> | ИНН: 780000000000 | ОГРНИП: 320000000000000</p>
+                <p style="margin-top: 5px;">© 2026 Нотариальный перевод документов в СПб. Все права защищены.</p>
+                <
