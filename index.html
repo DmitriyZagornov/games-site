@@ -408,4 +408,33 @@
             <div style="margin-top: 40px; font-size: 12px; color: #888; text-align: center; border-top: 1px solid #ddd; padding-top: 20px;">
                 <p><strong>ИП Иванов И.И.</strong> | ИНН: 780000000000 | ОГРНИП: 320000000000000</p>
                 <p style="margin-top: 5px;">© 2026 Нотариальный перевод документов в СПб. Все права защищены.</p>
+                <p style="margin-top: 5px;">Информация на сайте не является публичной офертой.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile-fixed-bar">
+        <a href="tel:+79507284034" class="m-call">📞 Позвонить</a>
+        <a href="https://wa.me/79507284034" class="m-wa">WhatsApp</a>
+    </div>
+
+    <script>
+        function calculatePrice() {
+            const lang = parseFloat(document.getElementById('calcLang').value);
+            const pages = parseInt(document.getElementById('calcPages').value) || 1;
+            const urgency = parseFloat(document.getElementById('calcUrgency').value);
+            const notaryFee = 800; // Фиксированная плата нотариуса
+
+            // Формула: (Цена языка * страницы * срочность) + нотариус
+            let total = (lang * pages * urgency) + notaryFee;
+            
+            // Округляем до 10
+            total = Math.round(total / 10) * 10;
+
+            document.getElementById('totalPrice').innerText = 'от ' + total + ' ₽';
+        }
+    </script>
+</body>
+</html>
+                <
                 <
