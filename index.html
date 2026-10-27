@@ -2,173 +2,346 @@
 <html lang="ru">
 <head>
     <!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=113791724', 'ym');
-
-    ym(113791724, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/113791724" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=113791724', 'ym');
+        ym(113791724, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/113791724" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H9J3KMZ1WB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H9J3KMZ1WB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-H9J3KMZ1WB');
+    </script>
 
-  gtag('config', 'G-H9J3KMZ1WB');
-</script>
     <meta charset="UTF-8">
-    <title>Нотариальный перевод документов</title>
-    <style>
-        /* ЗДЕСЬ ТОЛЬКО СТИЛИ */
-        body { font-family: sans-serif; background: #1a1a1a; color: white; text-align: center; padding: 20px; margin: 0; }
-        h1 { color: #00ffcc; margin-top: 10px; }
-        p { font-size: 18px; }
-        .btn { background: #00ffcc; color: black; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="yandex-verification" content="6bff889b0c8beec3" />
+    <title>Нотариальный перевод документов | СПб</title>
+
+    <style>
+        /* ---------- Базовые стили ---------- */
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: sans-serif;
+            background-color: #1a1a1a;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* ---------- Флаги по бокам (только на широких экранах) ---------- */
+        @media (min-width: 800px) {
+            body::before,
+            body::after {
+                content: "";
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                width: 80px;
+                background-image: url('https://github.com/DmitriyZagornov/DmitriyZagornov.github.io/raw/main/kxxgy2IiYqWLhmCwvNaunwlzEF16f78_WlpC6gNKMsDmv51s-r6YTkiOFAXOTEpAz0x-jsKatqgukKnDQ15nK0PR.jpg');
+                background-size: cover;
+                background-position: center;
+                z-index: 10;
+                pointer-events: none;
+            }
+            body::before { left: 0; }
+            body::after  { right: 0; }
+        }
+
+        /* ---------- Блок нотариального перевода ---------- */
+        .notary-block {
+            background-color: #2b2d31;
+            background-image: url('https://github.com/DmitriyZagornov/DmitriyZagornov.github.io/raw/main/AMkrOD5jybff4autO9zRdxb_QnAwPGfTlcqRrBsRb5zlwVHj9F1pF3qCbVwOy1nIX6sUSnT5pDJJDp8RtaddOmCN.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            padding: 40px 20px;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            text-align: center;
+            border-radius: 10px;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .notary-overlay {
+            position: absolute;
+            inset: 0;
+            background-color: rgba(43, 45, 49, 0.9);
+            z-index: 1;
+        }
+
+        .notary-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .notary-title {
+            color: #00f0c8;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .notary-subtitle {
+            font-size: 16px;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto 25px;
+        }
+
+        .notary-contacts {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+        .notary-contacts a { color: #fff; text-decoration: none; }
+        .notary-contacts a.email { color: #00f0c8; }
+
+        .notary-hours {
+            font-size: 14px;
+            color: #ccc;
+            margin-bottom: 35px;
+            line-height: 1.6;
+        }
+
+        /* ---------- Мессенджеры ---------- */
+        .messengers {
+            font-size: 14px;
+            margin-bottom: 40px;
+        }
+        .messengers p { margin-bottom: 15px; color: #ccc; }
+
+        .messenger-links {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .messenger-links a {
+            display: inline-block;
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            transition: opacity 0.15s;
+        }
+        .messenger-links a:hover { opacity: 0.85; }
+
+        .tg  { background-color: #0088cc; }
+        .wa  { background-color: #25D366; }
+        .ya  { background-color: #fc3f1d; }
+        .max { background-color: #5b50e5; }
+
+        /* ---------- Главная CTA-кнопка ---------- */
+        .cta-btn {
+            display: inline-block;
+            background-color: #00f0c8;
+            color: #1a1a1a;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 4px;
+            border: 2px solid #00f0c8;
+            transition: background-color 0.15s, color 0.15s;
+        }
+        .cta-btn:hover {
+            background-color: transparent;
+            color: #00f0c8;
+        }
+
+        /* ---------- Прайс-лист ---------- */
+        .price-section {
+            margin-top: 50px;
+            border-top: 1px solid #444;
+            padding-top: 30px;
+        }
+        .price-section h3 {
+            color: #00f0c8;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+
+        .table-wrap { overflow-x: auto; }
+
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 14px;
+            color: #ddd;
+            min-width: 500px;
+            background-color: rgba(26, 26, 26, 0.7);
+            border-radius: 8px;
+        }
+        .price-table thead tr {
+            background-color: #222;
+            color: #00f0c8;
+        }
+        .price-table th {
+            padding: 12px;
+            border-bottom: 2px solid #444;
+        }
+        .price-table td {
+            padding: 12px;
+            border-bottom: 1px solid #333;
+        }
+        .price-table td span {
+            font-size: 12px;
+            color: #999;
+        }
+
+        /* ---------- Доп. условия ---------- */
+        .price-notes {
+            text-align: left;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #bbb;
+            line-height: 1.6;
+            background-color: rgba(26, 26, 26, 0.7);
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .price-notes p { margin: 5px 0; }
+
+        .price-disclaimer {
+            font-size: 12px;
+            color: #777;
+            margin-top: 20px;
+            font-style: italic;
+            text-align: center;
+        }
+
+        /* ---------- Мобильная адаптация ---------- */
+        @media (max-width: 600px) {
+            .notary-title { font-size: 22px; }
+            .notary-block { padding: 30px 15px; }
+        }
+    </style>
 </head>
 <body>
-    
-    
-    <br><br>
 
-    <!-- БЛОК 2: Нотариальный перевод -->
-    <div style="background-color: #2b2d31; padding: 40px 20px; font-family: 'Arial', sans-serif; color: #ffffff; text-align: center; box-sizing: border-box; border-radius: 10px; max-width: 800px; margin: 0 auto;">
-        
-        <h2 style="color: #00f0c8; font-size: 28px; font-weight: bold; margin-bottom: 20px; text-transform: uppercase;">
-            Нотариальный перевод документов за 1 час
-        </h2>
+    <!-- ========== Блок: Нотариальный перевод ========== -->
+    <div class="notary-block">
+        <div class="notary-overlay"></div>
 
-        <p style="font-size: 16px; line-height: 1.6; max-width: 600px; margin: 0 auto 25px auto;">
-            Письменный перевод текста любого уровня сложности.<br>
-            Принимаем заказы онлайн 24/7!
-        </p>
+        <div class="notary-content">
+            <h2 class="notary-title">Нотариальный перевод документов за 1 час</h2>
 
-        <div style="font-size: 16px; font-weight: bold; margin-bottom: 25px; line-height: 1.8;">
-            📞 <a href="tel:+79507284034" style="color: #ffffff; text-decoration: none;">8 (950) 728-40-34</a><br>
-            ✉️ <a href="mailto:defgdoc@mail.ru" style="color: #00f0c8; text-decoration: none;">defgdoc@mail.ru</a>
-        </div>
-
-        <div style="font-size: 14px; color: #cccccc; margin-bottom: 35px; line-height: 1.6;">
-            📍 г. Санкт-Петербург<br>
-            🕒 ПН-ПТ: с 8:00 до 20:00 | СБ: с 9:00 до 18:00
-        </div>
-
-        <!-- Мессенджеры (кнопки) -->
-        <div style="font-size: 14px; margin-bottom: 40px;">
-            <p style="margin-bottom: 15px; color: #ccc;">Выберите удобный мессенджер для связи:</p>
-            
-            <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
-                
-                <!-- Telegram -->
-                <a href="https://t.me/jd190799" target="_blank" style="display: inline-block; background-color: #0088cc; color: white; padding: 12px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 14px;">
-                    Telegram
-                </a>
-
-                <!-- WhatsApp -->
-                <a href="https://wa.me/79507284034" target="_blank" style="display: inline-block; background-color: #25D366; color: white; padding: 12px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 14px;">
-                    WhatsApp
-                </a>
-
-                <!-- Яндекс Мессенджер -->
-                <a href="https://yandex.ru/chat/p/264d09a5-c69f-460f-9bf8-24031500887a" target="_blank" style="display: inline-block; background-color: #fc3f1d; color: white; padding: 12px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 14px;">
-                    Яндекс
-                </a>
-
-                <!-- Макс (Ссылку на профиль вставьте вместо #) -->
-                <a href="#" target="_blank" style="display: inline-block; background-color: #5b50e5; color: white; padding: 12px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 14px;">
-                    Макс
-                </a>
-
-            </div>
-        </div>
-
-        <!-- АКТИВНАЯ КНОПКА (ведет в WhatsApp) -->
-        <a href="https://wa.me/79507284034" style="display: inline-block; background-color: #00f0c8; color: #1a1a1a; font-size: 16px; font-weight: bold; padding: 15px 30px; text-decoration: none; border-radius: 4px; border: 2px solid #00f0c8;">
-            Отправить документы на перевод
-        </a>
-
-        <!-- ========================================== -->
-        <!-- ПРАЙС-ЛИСТ (ТАБЛИЦА) -->
-        <!-- ========================================== -->
-        <div style="margin-top: 50px; border-top: 1px solid #444; padding-top: 30px;">
-            <h3 style="color: #00f0c8; margin-bottom: 20px; font-size: 22px;">Стоимость перевода</h3>
-            
-            <div style="overflow-x: auto;">
-                <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 14px; color: #ddd; min-width: 500px;">
-                    <thead>
-                        <tr style="background-color: #222; color: #00f0c8;">
-                            <th style="padding: 12px; border-bottom: 2px solid #444;">Языковая группа</th>
-                            <th style="padding: 12px; border-bottom: 2px solid #444;">С ин. на русский</th>
-                            <th style="padding: 12px; border-bottom: 2px solid #444;">С русского на ин.</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td style="padding: 12px; border-bottom: 1px solid #333;"><strong>СНГ + Английский</strong><br><span style="font-size: 12px; color: #999;">белорусский, казахский, узбекский, украинский и др.</span></td>
-                            <td style="padding: 12px; border-bottom: 1px solid #333;">от 300 ₽</td>
-                            <td style="padding: 12px; border-bottom: 1px solid #333;">от 400 ₽</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 12px; border-bottom: 1px solid #333;"><strong>Европа (1 кат.)</strong><br><span style="font-size: 12px; color: #999;">немецкий, французский, испанский, итальянский и др.</span></td>
-                            <td style="padding: 12px; border-bottom: 1px solid #333;">от 400 ₽</td>
-                            <td style="padding: 12px; border-bottom: 1px solid #333;">от 500 ₽</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 12px; border-bottom: 1px solid #333;"><strong>Прибалтика</strong><br><span style="font-size: 12px; color: #999;">эстонский, латышский, литовский</span></td>
-                            <td style="padding: 12px; border-bottom: 1px solid #333;">от 500 ₽</td>
-                            <td style="padding: 12px; border-bottom: 1px solid #333;">от 600 ₽</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 12px; border-bottom: 1px solid #333;"><strong>Закавказье</strong><br><span style="font-size: 12px; color: #999;">армянский, грузинский, азербайджанский</span></td>
-                            <td style="padding: 12px; border-bottom: 1px solid #333;">от 600 ₽</td>
-                            <td style="padding: 12px; border-bottom: 1px solid #333;">от 700 ₽</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 12px; border-bottom: 1px solid #333;"><strong>Европа (2 кат.)</strong><br><span style="font-size: 12px; color: #999;">польский, чешский, греческий, турецкий и др.</span></td>
-                            <td style="padding: 12px; border-bottom: 1px solid #333;">от 700 ₽</td>
-                            <td style="padding: 12px; border-bottom: 1px solid #333;">от 800 ₽</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 12px; border-bottom: 1px solid #333;"><strong>Азия (1 кат.)</strong><br><span style="font-size: 12px; color: #999;">китайский, арабский</span></td>
-                            <td style="padding: 12px; border-bottom: 1px solid #333;">от 800 ₽</td>
-                            <td style="padding: 12px; border-bottom: 1px solid #333;">от 900 ₽</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 12px; border-bottom: 1px solid #333;"><strong>Азия (2 кат.)</strong><br><span style="font-size: 12px; color: #999;">японский, корейский, тайский и др.</span></td>
-                            <td style="padding: 12px; border-bottom: 1px solid #333;">от 900 ₽</td>
-                            <td style="padding: 12px; border-bottom: 1px solid #333;">от 1000 ₽</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- Дополнительные условия -->
-            <div style="text-align: left; margin-top: 20px; font-size: 14px; color: #bbb; line-height: 1.6;">
-                <p style="margin: 5px 0;">✔️ <strong>+100 ₽</strong> к тарифу за узкоспециализированные тексты, сложность форматирования (графики, таблицы)</p>
-                <p style="margin: 5px 0;">✔️ <strong>+600 ₽</strong> нотариальное заверение за документ, не за страницу</p>
-                <p style="margin: 5px 0;">✔️ <strong>Срочный тариф</strong> — стоимость умножается от x1,5 до x2</p>
-            </div>
-            
-            <p style="font-size: 12px; color: #777; margin-top: 20px; font-style: italic; text-align: center;">
-                * Данный раздел несет информационный характер. Точную стоимость уточняйте у менеджера.
+            <p class="notary-subtitle">
+                Письменный перевод текста любого уровня сложности.<br>
+                Принимаем заказы онлайн 24/7!
             </p>
+
+            <div class="notary-contacts">
+                <a href="tel:+79507284034">8 (950) 728-40-34</a><br>
+                <a href="mailto:defgdoc@mail.ru" class="email">defgdoc@mail.ru</a>
+            </div>
+
+            <div class="notary-hours">
+                г. Санкт-Петербург<br>
+                ПН-ПТ: с 8:00 до 20:00 | СБ: с 9:00 до 18:00
+            </div>
+
+            <!-- Мессенджеры -->
+            <div class="messengers">
+                <p>Выберите удобный мессенджер для связи:</p>
+                <div class="messenger-links">
+                    <a href="https://t.me/jd190799" target="_blank" class="tg">Telegram</a>
+                    <a href="https://wa.me/79507284034" target="_blank" class="wa">WhatsApp</a>
+                    <a href="https://yandex.ru/chat/p/264d09a5-c69f-460f-9bf8-24031500887a" target="_blank" class="ya">Яндекс</a>
+                    <a href="#" target="_blank" class="max">Макс</a>
+                </div>
+            </div>
+
+            <a href="https://wa.me/79507284034" class="cta-btn">Отправить документы на перевод</a>
+
+            <!-- Прайс-лист -->
+            <div class="price-section">
+                <h3>Стоимость перевода</h3>
+
+                <div class="table-wrap">
+                    <table class="price-table">
+                        <thead>
+                            <tr>
+                                <th>Языковая группа</th>
+                                <th>С ин. на русский</th>
+                                <th>С русского на ин.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>СНГ + Английский</strong><br><span>белорусский, казахский, узбекский, украинский и др.</span></td>
+                                <td>от 300 ₽</td>
+                                <td>от 400 ₽</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Европа (1 кат.)</strong><br><span>немецкий, французский, испанский, итальянский и др.</span></td>
+                                <td>от 400 ₽</td>
+                                <td>от 500 ₽</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Прибалтика</strong><br><span>эстонский, латышский, литовский</span></td>
+                                <td>от 500 ₽</td>
+                                <td>от 600 ₽</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Закавказье</strong><br><span>армянский, грузинский, азербайджанский</span></td>
+                                <td>от 600 ₽</td>
+                                <td>от 700 ₽</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Европа (2 кат.)</strong><br><span>польский, чешский, греческий, турецкий и др.</span></td>
+                                <td>от 700 ₽</td>
+                                <td>от 800 ₽</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Азия (1 кат.)</strong><br><span>китайский, арабский</span></td>
+                                <td>от 800 ₽</td>
+                                <td>от 900 ₽</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Азия (2 кат.)</strong><br><span>японский, корейский, тайский и др.</span></td>
+                                <td>от 900 ₽</td>
+                                <td>от 1000 ₽</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="price-notes">
+                    <p><strong>+100 ₽</strong> к тарифу за узкоспециализированные тексты, сложность форматирования (графики, таблицы)</p>
+                    <p><strong>+800 ₽</strong> нотариальное заверение за документ, не за страницу</p>
+                    <p><strong>Срочный тариф</strong> — стоимость умножается от x1,5 до x2</p>
+                </div>
+
+                <p class="price-disclaimer">
+                    * Данный раздел несет информационный характер. Точную стоимость уточняйте у менеджера.
+                </p>
+            </div>
         </div>
-
-    </div> <!-- КОНЕЦ БЛОКА ПЕРЕВОДА -->
-
-</body>
-</html>
-
-    </div> <!-- КОНЕЦ БЛОКА ПЕРЕВОДА -->
+    </div>
 
 </body>
 </html>
