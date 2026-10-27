@@ -29,20 +29,20 @@
     <title>Нотариальный перевод документов | СПб</title>
 
     <style>
-        /* ---------- Базовые стили ---------- */
+        /* ---------- Базовые стили (БЕЛЫЙ ФОН) ---------- */
         * { box-sizing: border-box; }
 
         body {
             font-family: sans-serif;
-            background-color: #1a1a1a;
-            color: #fff;
+            background-color: #ffffff; /* Белый фон */
+            color: #333;
             text-align: center;
             padding: 20px;
             margin: 0;
             overflow-x: hidden;
         }
 
-        /* ---------- БОКОВЫЕ КОЛОННЫ (имитация флагов CSS-градиентом) ---------- */
+        /* ---------- БОКОВЫЕ КОЛОННЫ С ВАШИМИ ФЛАГАМИ ---------- */
         @media (min-width: 800px) {
             body::before,
             body::after {
@@ -50,31 +50,16 @@
                 position: fixed;
                 top: 0;
                 bottom: 0;
-                width: 60px;
+                width: 80px; /* Ширина колонны */
                 z-index: 10;
                 pointer-events: none;
-                /* Каждый блок ~40px, цвета имитируют флаги */
-                background-image: linear-gradient(
-                    to bottom,
-                    #009246 0, #009246 40px,     /* Италия */
-                    #f4c430 40px, #f4c430 80px,  /* Индия */
-                    #002395 80px, #002395 120px, /* Франция */
-                    #ce1126 120px, #ce1126 160px,/* Турция */
-                    #009b77 160px, #009b77 200px,/* Ирландия */
-                    #0033a0 200px, #0033a0 240px,/* Греция */
-                    #c8102e 240px, #c8102e 280px,/* Марокко */
-                    #002b7f 280px, #002b7f 320px,/* Финляндия */
-                    #ffd100 320px, #ffd100 360px,/* Испания */
-                    #006341 360px, #006341 400px,/* Саудовская Аравия */
-                    #d52b1e 400px, #d52b1e 440px,/* Швейцария */
-                    #0051ba 440px, #0051ba 480px,/* Казахстан */
-                    #e30a17 480px, #e30a17 520px,/* Турция */
-                    #003580 520px, #003580 560px,/* ЕС */
-                    #1a1a1a 560px, #1a1a1a 600px /* Заглушка внизу */
-                );
-                background-size: 100% 600px;
-                background-repeat: repeat-y;
-                background-position: top center;
+                
+                /* Используем относительный путь к файлу в вашем репозитории */
+                background-image: url('kxxgy2IiYqWLhmCwvNaunwlzEF16f78_WlpC6gNKMsDmv51s-r6YTkiOFAXOTEpAz0x-jsKatqgukKnDQ15nK0PR.jpg');
+                
+                background-size: 100% auto; /* Картинка подстраивается под ширину */
+                background-position: center top;
+                background-repeat: repeat-y; /* Повторяем узор вниз */
             }
             body::before { left: 0; }
             body::after  { right: 0; }
@@ -82,16 +67,31 @@
 
         /* ---------- Блок нотариального перевода ---------- */
         .notary-block {
-            background-color: #2b2d31;
+            /* Здесь мы возвращаем вашу картинку со штампами на фон */
+            background-image: url('AMkrOD5jybff4autO9zRdxb_QnAwPGfTlcqRrBsRb5zlwVHj9F1pF3qCbVwOy1nIX6sUSnT5pDJJDp8RtaddOmCN.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            
             position: relative;
             padding: 40px 20px;
             font-family: 'Arial', sans-serif;
-            color: #fff;
+            color: #333;
             text-align: center;
             border-radius: 10px;
             max-width: 800px;
             margin: 0 auto;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15); /* Тень для объема */
+            border: 1px solid #e0e0e0;
             overflow: hidden;
+        }
+
+        /* Затемняющий слой, чтобы текст читался поверх штампов */
+        .notary-overlay {
+            position: absolute;
+            inset: 0;
+            background-color: rgba(255, 255, 255, 0.85); /* Белый полупрозрачный слой */
+            z-index: 1;
         }
 
         .notary-content {
@@ -100,7 +100,7 @@
         }
 
         .notary-title {
-            color: #00f0c8;
+            color: #008f7a;
             font-size: 28px;
             font-weight: bold;
             margin-bottom: 20px;
@@ -112,6 +112,7 @@
             line-height: 1.6;
             max-width: 600px;
             margin: 0 auto 25px;
+            color: #555;
         }
 
         .notary-contacts {
@@ -120,12 +121,12 @@
             margin-bottom: 25px;
             line-height: 1.8;
         }
-        .notary-contacts a { color: #fff; text-decoration: none; }
-        .notary-contacts a.email { color: #00f0c8; }
+        .notary-contacts a { color: #333; text-decoration: none; }
+        .notary-contacts a.email { color: #008f7a; }
 
         .notary-hours {
             font-size: 14px;
-            color: #ccc;
+            color: #777;
             margin-bottom: 35px;
             line-height: 1.6;
         }
@@ -135,7 +136,7 @@
             font-size: 14px;
             margin-bottom: 40px;
         }
-        .messengers p { margin-bottom: 15px; color: #ccc; }
+        .messengers p { margin-bottom: 15px; color: #555; }
 
         .messenger-links {
             display: flex;
@@ -164,29 +165,29 @@
         /* ---------- Главная CTA-кнопка ---------- */
         .cta-btn {
             display: inline-block;
-            background-color: #00f0c8;
-            color: #1a1a1a;
+            background-color: #008f7a;
+            color: #fff;
             font-size: 16px;
             font-weight: bold;
             padding: 15px 30px;
             text-decoration: none;
             border-radius: 4px;
-            border: 2px solid #00f0c8;
+            border: 2px solid #008f7a;
             transition: background-color 0.15s, color 0.15s;
         }
         .cta-btn:hover {
             background-color: transparent;
-            color: #00f0c8;
+            color: #008f7a;
         }
 
         /* ---------- Прайс-лист ---------- */
         .price-section {
             margin-top: 50px;
-            border-top: 1px solid #444;
+            border-top: 1px solid #ddd;
             padding-top: 30px;
         }
         .price-section h3 {
-            color: #00f0c8;
+            color: #008f7a;
             margin-bottom: 20px;
             font-size: 22px;
         }
@@ -198,26 +199,27 @@
             border-collapse: collapse;
             text-align: left;
             font-size: 14px;
-            color: #ddd;
+            color: #333;
             min-width: 500px;
-            background-color: rgba(26, 26, 26, 0.7);
+            background-color: #fff;
             border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
         .price-table thead tr {
-            background-color: #222;
-            color: #00f0c8;
+            background-color: #f0f0f0;
+            color: #008f7a;
         }
         .price-table th {
             padding: 12px;
-            border-bottom: 2px solid #444;
+            border-bottom: 2px solid #ddd;
         }
         .price-table td {
             padding: 12px;
-            border-bottom: 1px solid #333;
+            border-bottom: 1px solid #eee;
         }
         .price-table td span {
             font-size: 12px;
-            color: #999;
+            color: #888;
         }
 
         /* ---------- Доп. условия ---------- */
@@ -225,17 +227,18 @@
             text-align: left;
             margin-top: 20px;
             font-size: 14px;
-            color: #bbb;
+            color: #555;
             line-height: 1.6;
-            background-color: rgba(26, 26, 26, 0.7);
+            background-color: #f9f9f9;
             padding: 15px;
             border-radius: 8px;
+            border: 1px solid #eee;
         }
         .price-notes p { margin: 5px 0; }
 
         .price-disclaimer {
             font-size: 12px;
-            color: #777;
+            color: #999;
             margin-top: 20px;
             font-style: italic;
             text-align: center;
@@ -245,12 +248,16 @@
         @media (max-width: 600px) {
             .notary-title { font-size: 22px; }
             .notary-block { padding: 30px 15px; }
+            .notary-overlay { background-color: rgba(255, 255, 255, 0.92); } /* Чуть плотнее на телефонах */
         }
     </style>
 </head>
 <body>
 
     <div class="notary-block">
+        <!-- Этот слой делает фон светлее, чтобы текст был читаемым -->
+        <div class="notary-overlay"></div>
+
         <div class="notary-content">
             <h2 class="notary-title">Нотариальный перевод документов за 1 час</h2>
 
